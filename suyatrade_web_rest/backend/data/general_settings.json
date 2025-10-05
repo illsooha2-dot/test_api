@@ -1,0 +1,16 @@
+{
+  "autotrade_enabled": false,
+  "order_amount": 100000000,
+  "max_items": 10,
+  "sell_strategy_enabled": false,
+  "sell_strategy": "moving_average",
+  "target_profit": 5,
+  "stop_loss": -3,
+  "trailing_start": 3,
+  "trailing_fall": -1,
+  "trailing_base_stoploss": -3,
+  "ma_time_unit": "일봉",
+  "ma_time_interval": 5,
+  "ma_short": 5,
+  "ma_long": 20
+}

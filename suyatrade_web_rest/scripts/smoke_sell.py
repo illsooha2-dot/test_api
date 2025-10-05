@@ -1,0 +1,17 @@
+# D:\suyatrade_web_rest\scripts\smoke_sell.py
+import requests
+
+API = "http://127.0.0.1:5174"
+
+def call(path, payload):
+    r = requests.post(f"{API}{path}", json=payload, timeout=10)
+    try:
+        print("RESP:", r.json())
+    except Exception:
+        print("RESP(text):", r.text)
+    print("HEAD:", dict(r.headers))
+
+if __name__ == "__main__":
+    # 보유 수량 있어야 체결성 응답이 납니다. (없으면 업무 코드로 거절)
+    payload = {"code": "005930", "qty": 1, "market": True}
+    call("/api/orders/stock/sell", payload)
